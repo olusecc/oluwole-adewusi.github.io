@@ -4,7 +4,10 @@
   "description": "",
   "main": "global.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx @tailwindcss/cli --input ./css/style.css --output ./dist/output.css --watch",
+    "build": "npx @tailwindcss/cli --input ./css/style.css --output ./dist/output.css",
+    "deploy": "npm run build && git add -A && git commit -m 'Update site' && git push origin main"
   },
   "keywords": [],
   "author": "",
